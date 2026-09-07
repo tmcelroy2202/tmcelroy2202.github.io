@@ -3,11 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My name is Thomas McElroy</title>
+    <title>Tommy's Site</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+    body{
+        background-color: #1e1e2e;
+    }
+
+
+    main{
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        border: 5px solid #cba6f7;
+        margin-bottom: 250px;
+        padding: 0px 20px 20px 20px;
+        border-radius: 5px;
+        /* shoutout https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-shadow */
+        box-shadow: inset 0px 0px 12px 3px #cba6f7, 0px 0px 12px 3px #cba6f7;
+        font-size: 2rem;
+    }
+    footer{
+        border: 5px solid blue;
+    }
+    h1{
+        color: #cba6f7;
+    }
+    h2 {
+        color: #bac2de;
+    }
+    h3 {
+        color: #a6adc8;
+    }
+    p {
+        color: #cdd6f4;
+    }
+
+    a:link {
+        color: #cba6f7;
+    }
+
+    a:visited {
+        color: #f5c2e7;
+    }
+
+    a:hover {
+        color: #fe640b;
+    }
+
+    li::marker {
+        color: white;
+    }
+
+    hr {
+        color: #4c4f69;
+    }
+    video, img {
+        display: block;
+        max-width: 40vw;
+        max-height: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        
+
+    </style>
 </head>
 <body>
-    <h1>My name is Thomas McElroy</h1>
-    <a href = "itis3135/">Click to go to my ITIS3135 Site</a> 
+    <main>
+    <h1>Welcome to my page</h1>
+    <p>Hello! I am Tommy, and this is my page. I am a UNCC Student studying Computer Science, IT Concentration. </p>
+    <p>I like: </p>
+    <ul>
+    <li><p>Linux (arch btw)</p></li>
+    <li><p>Vim / General keyboard navigation (<a href="https://github.com/AlfredoSequeida/hints">Hints</a>, <a href="https://github.com/tridactyl/tridactyl">Tridactyl</a>, <a href="https://github.com/helix-editor/helix/">Helix</a>)</p></li>
+    <li><p>Biking</p></li>
+    <li><p>Python</p></li>
+    <li><p>Automation</p></li>
+    <li><p>The hit 2009 TV Series <a href="https://www.themoviedb.org/tv/18347-community">Community</a></p></li>    </ul>
+
+    <hr>
+    <h2>Projects</h2>
+    <p>I am working on a ton of stuff right now.</p>
+    <h3>Container</h3>
+    <p><a href="https://github.com/tmcelroy2202/container">Container</a> is my open source self hosted voice controlled storage system. It is currently undergoing a V2 rewrite including local LLM search, parakeet STT, a custom trained wakeword model with 99.7% recall and .72 FPPH on ACAV100M, and 3d printed drawers. Demo of V1:</p><br>
+    <video src="https://sharex.tommyhost.ing/u/ygGHXf.mp4" alt="Demo video of my storage system v1, showing me adding a power blocker to my storage system, by saying 'container add power blocker', then putting the power blocker in the storage system where it lit up green. i then say 'container search power', and see where it lights up yellow, to show partial matches. I then demo an exact search, and removing an item." controls></video>
+    <hr>
+
+    <h3>Homelab</h3>
+    <p>I also have a pretty expansive homelab, in a 20U server rack in my bedroom, including a 4 node proxmox cluster with a 14TB ZFS pool, Dell R730 running Proxmox Backup Server with a 32Tb ZFS pool, 10Gbe switch, UPS, 1Gbe L2/L3 managed switch, IP KVM, and 8 Computer IP KVM switch. </p><br>
+    <img src="http://sharex.tommyhost.ing/u/rack.jpeg" alt="Server rack picture showing the items described above">"
+
+    <hr>
+
+    <p>More projects are more thorougly documented on my <a href="https://notes.tommyhost.ing/">notes site</a></p>
+
+    <p>This page is using the Catpuccin Mocha color pallete, as is the rest of my software, as defined <a href="https://catppuccin.com/palette/">here</a></p>
+    <p>If you are coming to this site from my frontend web dev clas, you can <a href = "itis3135/">click here to go to my ITIS3135 Site</a> </p>
+    </main>
 </body>
 </html>
