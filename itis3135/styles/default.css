@@ -1,0 +1,92 @@
+body{
+    background-color: #1e1e2e;
+}
+
+/* so that dark reader doesnt make the site look weird */
+:root {
+    color-scheme: dark;
+}
+
+
+main{
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #cba6f7;
+    margin-bottom: 250px;
+    padding: 0px 20px 20px 20px;
+    border-radius: 5px;
+    /* shoutout https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-shadow */
+    box-shadow: inset 0px 0px 12px 3px #cba6f7, 0px 0px 12px 3px #cba6f7;
+    font-size: 2rem;
+    font-family: "Noto Sans Mono", monospace;
+}
+footer{
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px 20px 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Arial";
+}
+
+header{
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #1e1e2e;
+    padding: 0px 20px 20px 20px;
+    font-size: 2rem;
+    font-family: "Arial";
+}
+#headerimg {
+    box-sizing: border-box;
+    width: 150px;
+    /* display: inline-flex; */
+    height: 150px;
+    float: left;
+    padding: 30px 15px 10px 5px;
+}
+
+h1{
+    color: #cba6f7;
+    font-size: 2.5rem
+}
+h2 {
+    color: #bac2de;
+}
+h3 {
+    color: #a6adc8;
+}
+p {
+    color: #cdd6f4;
+}
+
+a:link {
+    color: #cba6f7;
+}
+
+a:visited {
+    color: #f5c2e7;
+}
+
+a:hover {
+    color: #fe640b;
+}
+
+li::marker {
+    color: white;
+}
+
+hr {
+    color: #4c4f69;
+}
+video, img {
+    display: block;
+    max-width: 40vw;
+    max-height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
