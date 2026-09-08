@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tommy's Site</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Tommy's Site | About Me</title>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
     <link rel=icon href="http://sharex.tommyhost.ing/u/tommyicon2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
     <style>
     body{
         background-color: #1e1e2e;
@@ -18,7 +21,7 @@
     }
 
 
-    main{
+    body{
         max-width: 80vw;
         margin-left: auto;
         margin-right: auto;
@@ -29,9 +32,7 @@
         /* shoutout https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-shadow */
         box-shadow: inset 0px 0px 12px 3px #cba6f7, 0px 0px 12px 3px #cba6f7;
         font-size: 2rem;
-    }
-    footer{
-        border: 5px solid blue;
+        font-family: "Merriweather", "Noto Sans Mono" 
     }
     h1{
         color: #cba6f7;
@@ -44,6 +45,10 @@
     }
     p {
         color: #cdd6f4;
+    }
+
+    a {
+        font-family: "Noto Sans Mono" 
     }
 
     a:link {
@@ -72,14 +77,24 @@
         margin-left: auto;
         margin-right: auto;
     }
-        
-
+    /* shoutout https://www.w3schools.com/cssref/atrule_media.php */
+    @media screen and (max-width: 800px){
+        body{
+            box-shadow: none;
+            border: none;
+        }
+    }
     </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <h1>Tommy's Site</h1>
+        <p>Hello! I am Tommy, and this is my page. I am a UNCC Student studying Computer Science, IT Concentration. </p>
+    </header>
     <main>
-    <h1>Welcome to my page</h1>
-    <p>Hello! I am Tommy, and this is my page. I am a UNCC Student studying Computer Science, IT Concentration. </p>
+
+    <h2>About Me</h2>
     <p>I like: </p>
     <ul>
     <li><p>Linux (arch btw)</p></li>
@@ -105,11 +120,14 @@
 
     <p>More projects are more thorougly documented on my <a href="https://notes.tommyhost.ing/">notes site</a></p>
 
+    </main>
+    <footer>
     <p>This page is using the Catpuccin Mocha color pallete, as is the rest of my software, as defined <a href="https://catppuccin.com/palette/">here</a></p>
     <p>If you are coming to this site from my frontend web dev clas, you can <a href = "itis3135/">click here to go to my ITIS3135 Site</a> </p>
 
     <p>If you would like to reach out to me, you can on <a href="https://www.linkedin.com/in/thomas-mcelroy-b68bb4352/">LinkedIn</a></p>
     <p>Also, follow my <a href="https://github.com/tmcelroy2202/">GitHub</a>!</p>
-    </main>
+    <em> You are all better than you think you are. You are designed not to believe it when you hear it from yourself. </em>
+    </footer>
 </body>
 </html>
