@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# IMPORTANT: THIS WAS MADE BY GOOGLE GEMINI, I AM NOT CLAIMING TO HAVE MADE THIS SCRIPT. I just did not want to use filezilla. 
 import os
 import stat
 import subprocess
