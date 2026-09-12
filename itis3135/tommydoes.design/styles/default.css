@@ -1,0 +1,128 @@
+body{
+    background-color: #3c3836 ;
+}
+
+/* so that dark reader doesnt make the site look weird */
+:root {
+    color-scheme: dark;
+}
+
+
+main{
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 5px solid #d65d0e; */
+    margin-bottom: 100px;
+    padding: 0px 20px 20px 20px;
+    border-radius: 5px;
+    /* shoutout https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-shadow */
+    /* box-shadow: inset 0px 0px 12px 0px #7f5e6c, 0px 0px 12px 0px #7f5e6c; */
+    font-size: 2rem;
+    font-family: "Noto Sans Mono", monospace;
+}
+footer{
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px 20px 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Arial";
+}
+
+header{
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #3c3836 ;
+    padding: 0px 20px 20px 20px;
+    font-size: 2rem;
+    font-family: "Arial";
+    background-color: #1d2021;
+    border-radius: 100px;
+}
+#headerimg {
+    box-sizing: border-box;
+    width: 100px;
+    /* display: inline-flex; */
+    height: 100px;
+    float: left;
+    padding: 40px 15px 10px 5px;
+}
+
+h1{
+    color: #fbf1c7;
+    font-size: 2.5rem;
+    padding-top: 10px;
+}
+h2 {
+    color: #d65d0e;
+}
+h3 {
+    color: #a6adc8;
+    background-color: #1d2021;
+    border-radius: 5px;
+}
+p {
+    color: #f8f8f2;
+}
+
+a:link {
+    color: #98971a;
+}
+
+a:visited {
+    color: #cc241d;
+}
+
+a:hover {
+    background-color: #1d2021;
+    border-radius: 5px;
+    color: #fe640b;
+}
+
+li::marker {
+    color: #98971a;
+    content: "[*] ";
+}
+
+li {
+    margin-left: 50px;
+}
+
+
+hr {
+    margin-top: 25px;
+    color: #4c4f69;
+}
+video, img {
+    display: block;
+    max-width: 40vw;
+    max-height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* shoutout https://www.w3schools.com/cssref/atrule_media.php */
+@media screen and (max-width: 800px){
+    #headerimg{
+        display: none;
+    }
+}
+
+
+h6 {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.centered {
+    text-align: center;
+}
+
+#Contact {
+    background-color: #32302f;
+    padding: 0px 0px 20px 20px;
+    border-radius: 20px;
+}
