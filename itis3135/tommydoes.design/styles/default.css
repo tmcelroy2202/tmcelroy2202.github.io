@@ -111,6 +111,10 @@ video, img {
     }
 }
 
+ul{
+    list-style-type: square;
+}
+
 
 h6 {
     text-align: center;
