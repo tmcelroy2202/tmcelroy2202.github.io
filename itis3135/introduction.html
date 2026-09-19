@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas McElroy's Terrific Muskrat | ITIS3135 | Home</title>
+    <title>Thomas McElroy's Terrific Muskrat | ITIS3135 | Introduction</title>
     <link rel="stylesheet" href="styles/default.css">
-    <link rel=icon href="images/tommyicon.png">
+    <link rel=icon href="images/tommyfavicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
@@ -13,19 +13,11 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-    <img src=images/tommyicon.png id="headerimg" alt="Me, pointing at the camera">
-    <h1>Thomas McElroy's Terrific Muskrat | ITIS3135</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="contract.html">Contract</a>
-        <a href="about.html">About</a>
-    </nav>
-    <hr>
-    </header>
+    <div data-include="components/header.html"></div>
+
     <main>
-        <h2>Introduction: Thomas A McElroy</h2>
+        <h2>Introduction</h2>
+        <h2>Thomas A McElroy</h2>
         <!-- <p>I understand that this is a public document, and I won't put anything here I wouldn't want anyone to see. - TM 8/20/26</p> -->
         <h6 class="centered" id="display-name">Thomas A. "Tommy" McElroy ~ Terrific Muskrat</h6>
         <figure>
@@ -55,20 +47,11 @@
         </ul>
         <blockquote>“You are all better than you think you are. You are designed not to believe it when you hear it from yourself.”</blockquote>
         <p>- Jeff Winger (Community S1E1)</p>
-        <nav class="centered">
-            <p><a href="../index.html">CLT Web</a> |  
-            <a href="https://tmcelroy2202.github.io/">GitHub.io</a> | 
-            <a href="https://github.com/tmcelroy2202/">GitHub</a> | 
-            <a href="https://www.freecodecamp.org/thomas-mcelroy">freeCodeCamp</a> | 
-            <a href="https://www.codecademy.com/profiles/giga5446778097">Codecademy</a> |
-            <a href="https://www.linkedin.com/in/thomas-mcelroy-b68bb4352/">LinkedIn</a></p>
-        </nav>
 
+    <div data-include="components/footer.html"></div>
     </main>
-    <footer>
-        <p>A product of <a href=./tommydoes.design/index.html>Tommy Does Design</a>, Certified in ©2026</p>
-        <em>You are all better than you think you are. You are designed not to believe it when you hear it from yourself.</em>
-    </footer>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 
 </html>
