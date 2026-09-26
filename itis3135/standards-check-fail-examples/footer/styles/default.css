@@ -1,6 +1,6 @@
 body{
-    background-color: #3c3836 ;
-    max-width: 100%;
+    background-color: #282a36;
+    max-width: 100vw;
     margin: 0 auto;
 }
 
@@ -14,7 +14,7 @@ main{
     max-width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    /* border: 5px solid #d65d0e; */
+    /* border: 5px solid #bd93f9; */
     margin-bottom: 100px;
     padding: 0px 20px 20px 20px;
     border-radius: 5px;
@@ -37,62 +37,49 @@ header{
     max-width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid #3c3836 ;
+    border: 5px solid #282a36;
     padding: 0px 20px 20px 20px;
     font-size: 2rem;
     font-family: "Arial";
-    background-color: #1d2021;
-    border-radius: 100px;
 }
 #headerimg {
     box-sizing: border-box;
-    width: 100px;
+    width: 150px;
     /* display: inline-flex; */
-    height: 100px;
+    height: 150px;
     float: left;
-    padding: 40px 15px 10px 5px;
+    padding: 30px 15px 10px 5px;
 }
 
 h1{
-    color: #fbf1c7;
-    font-size: 2.5rem;
-    padding-top: 10px;
+    color: #bd93f9;
+    font-size: 2.5rem
 }
 h2 {
-    color: #d65d0e;
+    color: #bac2de;
 }
 h3 {
     color: #a6adc8;
-    background-color: #1d2021;
-    border-radius: 5px;
 }
 p {
     color: #f8f8f2;
 }
 
 a:link {
-    color: #98971a;
+    color: #bd93f9;
 }
 
 a:visited {
-    color: #cc241d;
+    color: #ff79c6;
 }
 
 a:hover {
-    background-color: #1d2021;
-    border-radius: 5px;
     color: #fe640b;
 }
 
 li::marker {
-    color: #98971a;
-    content: "[*] ";
+    color: white;
 }
-
-li {
-    margin-left: 50px;
-}
-
 
 hr {
     margin-top: 25px;
@@ -113,10 +100,6 @@ video, img {
     }
 }
 
-ul{
-    list-style-type: square;
-}
-
 
 h6 {
     text-align: center;
@@ -127,8 +110,3 @@ h6 {
     text-align: center;
 }
 
-#Contact {
-    background-color: #32302f;
-    padding: 0px 0px 20px 20px;
-    border-radius: 20px;
-}
