@@ -1,0 +1,149 @@
+#introduction-form,
+#generator-controls {
+    color: #f8f8f2;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#introduction-form fieldset {
+    border: 1px solid #6272a4;
+    border-radius: 5px;
+    margin: 1.25rem 0;
+    padding: 1rem;
+}
+
+#introduction-form legend {
+    color: #bd93f9;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+}
+
+#introduction-form label {
+    display: block;
+    margin: 0.65rem 0;
+}
+
+#introduction-form input,
+#introduction-form textarea {
+    background: #1d1f2a;
+    border: 1px solid #6272a4;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #f8f8f2;
+    display: block;
+    font: inherit;
+    margin-top: 0.25rem;
+    max-width: 100%;
+    padding: 0.55rem;
+    width: 100%;
+}
+
+#introduction-form input[type="file"] {
+    padding: 0.4rem;
+}
+
+#introduction-form input:focus,
+#introduction-form textarea:focus,
+#output-panels textarea:focus {
+    outline: 2px solid #bd93f9;
+    outline-offset: 2px;
+}
+
+#image-preview {
+    border-radius: 4px;
+    max-height: 18rem;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.course-row {
+    background: #222431;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.course-row button[data-remove-course] {
+    position: absolute;
+    right: 1rem;
+    top: 0.25rem;
+}
+
+.field-help {
+    font-size: 0.9rem;
+}
+
+.button-row {
+    margin: 1rem 0;
+}
+
+.button-row button,
+#introduction-form button {
+    background: #44475a;
+    border: 1px solid #bd93f9;
+    border-radius: 4px;
+    color: #f8f8f2;
+    cursor: pointer;
+    font: inherit;
+    margin: 0.25rem 0.75rem 0.25rem 0;
+    padding: 0.55rem 0.9rem;
+}
+
+.button-row button:hover,
+#introduction-form button:hover {
+    background: #6272a4;
+}
+
+#generator-controls {
+    border-top: 1px solid #6272a4;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.generator-heading {
+    font-size: 1.3rem;
+}
+
+#output-panels fieldset {
+    border: 1px solid #6272a4;
+    border-radius: 5px;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+#output-panels legend {
+    color: #bd93f9;
+    padding: 0 0.5rem;
+}
+
+#output-panels textarea {
+    background: #1d1f2a;
+    border: 1px solid #6272a4;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #f8f8f2;
+    display: block;
+    font: 0.85rem/1.45 "Noto Sans Mono", monospace;
+    max-width: 100%;
+    padding: 0.75rem;
+    resize: vertical;
+    width: 100%;
+}
+
+.no-wrap {
+    white-space: pre;
+}
+
+.output-wrap-toggle {
+    display: block;
+    margin: 0.75rem 0;
+}
+
+.output-wrap-toggle input {
+    margin-right: 0.5rem;
+}
+
+#generated-introduction[hidden],
+#generated-footer[hidden],
+#start-over[hidden] {
+    display: none;
+}
