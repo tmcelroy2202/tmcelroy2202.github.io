@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storadex | What is Storadex?</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel=icon href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Mono:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <!-- parent div so i can organize into grid underneath -->
+        <div>
+            <!-- icon for storadex, for header, in a div so that it can be properly gridded. -->
+            <div>
+            <img alt="Storadex icon, a drawer being pulled out from a frame" src="images/favicon.png">
+            </div>
+            <!-- Storadex text, and slogan, in a div so that it can be properly gridded. -->
+            <div>
+            <h1>Storadex</h1>
+            <p><em>Storadex, search flash drive!</em></p>
+            </div>
+            <div>
+            <!-- icon for storadex, for header, in a div so that it can be properly gridded. -->
+            <img alt="Storadex icon, a drawer being pulled out from a frame" src="images/favicon.png">
+            </div>
+        </div>
+        <nav>
+        <a href="#What">What</a> !
+        <a href="#Who">Who</a> !
+        <a href="#When">When</a> !
+        <a href="#Where">Where</a> !
+        <a href="#How">How</a> !
+        <a href="#Why">Why</a> !
+        <a href="#AIPrompts">AI Prompts</a>
+        </nav>
+    </header>
+    <main>
+        <!-- This has an id so it can be hidden. -->
+        <section id="What">
+        <h2>What Is Storadex?</h2>
+        <p>Storadex is a smart storage system, which is controllable via voice, and allows you to access all your items via LED lights, removing the mental overhead of organization. </p>
+        <figure>
+            <img src="images/storagesystem-fs8.png" alt="A card catalog, and plastin bin system, with led lights attached to them for visualizing where items are">
+            <figcaption>
+            A photo I took of the original Container storage system pre-storadex rewrite.
+            <em>Source: My Photo, no AI was used.</em>
+            </figcaption>
+        </figure>
+        <p>If you are losing little stuff all the time within your workspace or home, because of the mental overhead and time spend associated with constantly organizing all of your projects, Storadex is a great way to make organization easier.</p>
+
+
+        </section>
+        <!-- This has an id so it can be hidden. -->
+        <section id="Who">
+        <h2>Who Is Behind Storadex?</h2>
+        <p>I am Tommy McElroy, I am a student at UNCC, and I have been working on storadex on and off for a few years now. I have always struggled with keeping track of physical items, and so Storadex has been of huge help to me. </p>
+        <figure>
+            <img src="../../images/tommyicon.png">
+        <figcaption>A photo of me, for reference.
+            <em>Source: My Photo, no AI was used.</em>
+        </figcaption>
+        </figure>
+        <p>If you like this project, you should check out my <a href=https://github.com/tmcelroy2202>GitHub!</a></p>
+        </section>
+        <!-- This has an id so it can be hidden. -->
+        <section id="When">
+        <h2>When Was Storadex Created?</h2>
+        <p>Storadex started as <a href=https://github.com/tmcelroy2202/container>Container</a>, in 2024. Storadex is not yet available, but Container can be used by you, today! It takes around 10 minutes to set up on a existing drawer system, and only needs some minimal amount of linux knowledge. If you have a 3d printer, the print time depends on the scale of your drawers, and speed of your printer, but I was able to print a full drawer out in an evening.
+        <figure>
+        <img src=images/minidrawer.jpeg alt="3d printed miniature version of a single node in the storadex drawer system">
+        <figcaption>This is a miniature print of a drawer and frame, for making sure that all the joining mechanisms work. No AI was used in the creation of this photo, I took it myself.
+            <em>Source: My Photo, no AI was used.</em>
+        </figcaption>
+        </figure>
+        <p>You can expect the full version of Storadex to release within the coming months!</p>
+        </section>
+        <!-- This has an id so it can be hidden. -->
+        <section id="Where">
+        <h2>Where Can You Use Storadex?</h2>
+        <p>The Storadex storage system can be used with any drawer system that has space for LED lights to be added, whether that be in a grid formation, or per drawer. You can also make your own storage system, via 3d printing.</p>
+        <p>Here is an example of using the grid setup on a plastic drawer setup from amazon</p>
+        <figure>
+        <img src="images/grid.png" alt="A grid based storage system, where led lights indicate the x and y positions of an item in a normal set of drawers">
+        <figcaption>
+        This is a grid configuration for a drawer. No AI was used in the creation of this photo. It is from the original release of <a href="https://github.com/tmcelroy2202/container">Container</a>.
+        <em>Source: My Photo, no AI was used.</em>
+        </figcaption>
+        </figure>
+
+        <p>As you can see, the grid is lighting up the x and y position of the item you are looking for. this does limit it's ability to return multiple items in a readable fashion, though, which is why the per drawer lighting setup is preferable</p>
+
+        <p>Here is an example of using the per drawer lighting setup with a card catalog from amazon</p>
+        <img src="images/perdrawer.png" alt="A per drawer lighting system, where there are lights associated with each individual drawer in the system, so xy based indexing is not needed.">
+        <p>As you can see here, we have lights below each drawer, and when you search for an item, you can immediately see where the item is. If you already own drawers iwth a lip like this below them, that you can attach LED lights too, then this works great!</p>
+        </section>
+        <!-- This has an id so it can be hidden. -->
+        <section id="How">
+        <h2>How Can You Use Storadex?</h2>
+        <p>Once the code is released, you will be able to go to <a href=https://github.com/tmcelroy2202/storadex>this repository</a> to find setup instructions. There will be a docker container based installation method, and a installer script for installing natively. 
+        <p> For now, you can use <a href="https://github.com/tmcelroy2202/container">container</a>, the project I made for the same purpose before storadex, for all your storage needs. </p>
+        <figure>
+            <img src="images/storagesystem-fs8.png" alt="A card catalog, and plastin bin based storage system, the one used in Container.">
+            <figcaption>Here is what container looked like
+            <em>My Photo, no AI was used</em>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/fancydrawerrender.png" alt="A render of the new storadex system, fully 3d printed, modular, and scalable to any size">
+            <figcaption>Here are the 3d printed drawers that storadex adds
+            <em>Photo rendered by GPT 6.1 Sol of the OpenSCAD model for storadex</em>
+            </figcaption>
+        </figure>
+        
+        </section>
+        <!-- This has an id so it can be hidden. -->
+        <section id="Why">
+         <h2>Why Storadex?</h2>
+        <p>Storadex solves the problem that has always stopped me from getting my stuff organized. Friction. If I have an item in my hands, and I need to put it away, I will walk up to the drawers, and think "where does this go?", and then i'll consider a few options. Does a usb power blocker belong with the raspberry pi stuff, because I only use it with raspberry pis? Or does a usb power blocker belong with the usb adapters, because it is one? Or does it belong with the power adapters, because it strips power from a cable? Or does it belong with the usb hubs? If I have to consider all of that, I am just going to leave the thing on the nearest ledge, and deal with it later. In reality, I won't even deal with it later, it will just stay on that ledge. Storadex solves this by handling those choices for me.</p>
+        <figure>
+            <img src=images/powerblocker.png alt="a usb power blocker, held infront of the drawer system">
+            <figcaption>
+            This is a USB Power Blocker, it is used to block usb power from passing through the data cable for my pikvm, and I do not know where it belongs in my drawers. 
+            <em>My Photo, no AI was used.</em>
+            </figcaption>
+        </figure>
+        <p>I say "storadex add usb power blocker", and it lights up green where it wants me to put the usb power blocker, and then I do not think about it anymore. I will not remember that location, and I am not supposed to. 
+        <figure>
+            <img src="images/lightuppowerblocker.png" alt="A light showing on the card catalog based storage system, so I know where to place the usb power blocker">
+            <figcaption>
+            This is the storage system lighting up the location that the power blocker belongs in, after I said "storadex add usb power blocker"
+            <em>My Photo, no AI was used.</em>
+            </figcaption>
+        </figure>
+        <p>Later, when I need my usb power blocker, I can just walk up and say "storadex remove usb power blocker", and it will light up in red where it should be removed from.</p>
+
+
+        <figure>
+            <img src="images/removepowerblocker.png" alt="A red light shwoing on the storage system, indicating where to remove the usb power blocker from">
+            <figcaption>
+            This is the storage system lighting up the location to remove the power blocker from, when i say "storadex remove power blocker" later.
+            <em>My Photo, no AI was used.</em>
+            </figcaption>
+        </figure>
+        </section>
+        <!-- This has an id so it can be hidden. -->
+        <section id="AIPrompts">
+        <h2>AI Prompts</h2>
+        <p>AI was used to assist with the creation of the javascript for the navbar, taking me from a basic nonfunctional concept, to a working implementation. It was also used in the rendering of my 3d models of into this nice demo image, for the favicon, and for the How Page's comparison between Container and Storadex</p>
+        <figure>
+            <img src="images/fancydrawerrender-fs8.png">
+            <figcaption>The image AI was used to generate, with the prompt to gpt 6.1 sol in chatgpt work being 'can you render a simple mockup photo of how a couple drawers in a frame would look, and make it reasonably pretty? one drawer should be pulled out'. 
+            <em>Generated by GPT 6.1 Sol, from an OpenSCAD model of the drawers</em>
+            </figcaption>
+        </figure>
+        <p>The prompt for that code, sent to gemini 3.8 flash, was:<br>
+ i have a nav and a page with many headers and i want to turn it into an spa where you can click any of the nav links and it will change the page via javascript to just show that section. each section has its own id.</p>
+<pre>
+&lt;nav&gt;
+    &lt;a href=&quot;#What&quot;&gt;What&lt;/a&gt;
+    &lt;a href=&quot;#Who&quot;&gt;Who&lt;/a&gt;
+    &lt;a href=&quot;#When&quot;&gt;When&lt;/a&gt;
+    &lt;a href=&quot;#Where&quot;&gt;Where&lt;/a&gt;
+    &lt;a href=&quot;#How&quot;&gt;How&lt;/a&gt;
+    &lt;a href=&quot;#Why&quot;&gt;Why&lt;/a&gt;
+    &lt;a href=&quot;#AIPrompts&quot;&gt;AI Prompts&lt;/a&gt;
+&lt;/nav&gt;
+</pre>
+<p>How should the javascript work for that? this is what i have sofar:</p>
+<pre>
+&lt;script&gt;
+navLinks = document.querySelectorAll(&quot;nav a&quot;);
+sections = document.querySelectorAll(&quot;section&quot;);
+navLinks.forEach(function(link){
+    link.addEventListener(&quot;click&quot;, function(event) {
+        for (i = 0; i &lt; sections.length(); i++){
+            sections[i].style.display = &quot;none&quot;;
+        }
+        event.preventDefault();
+        sectionId = link.getAttribute(&quot;id&quot;);
+        sectionId.style.display = &quot;&quot;;
+    }
+}
+&lt;/script&gt; 
+</pre>
+    </section>
+    </main>
+    <footer>
+        <p>Designed by <a href="../tommydoes.design/index.html">Tommy Does Design</a>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+      navLinks = document.querySelectorAll("nav a");
+      sections = document.querySelectorAll("section");
+
+      navLinks.forEach(function(link) {
+        
+        link.addEventListener("click", function(event) {
+          event.preventDefault();
+          for (var i = 0; i < sections.length; i++) {
+            sections[i].style.display = "none";
+          }
+
+          targetSelector = link.getAttribute("href");
+          targetSection = document.querySelector(targetSelector);
+          if (targetSection) {
+            targetSection.style.display = "block";
+            document.title = "Storadex | " + targetSection.querySelector('h2').textContent;
+          }
+        });
+      });
+
+      for (var i = 1; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+    </script>
+</body>
+
+</html>
+
+

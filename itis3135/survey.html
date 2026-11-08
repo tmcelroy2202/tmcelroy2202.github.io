@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas McElroy's Terrific Muskrat | ITIS3135 | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas McElroy's Terrific Muskrat | ITIS3135 | Survey</title>
     <link rel="stylesheet" href="styles/default.css">
     <link rel=icon href="images/tommyfavicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,76 @@
 <body>
       <div data-include="components/header.html"></div>
     <main>
-        <h2>Survey Form</h2>
-    </main>
+    <h2>Survey</h2>
+    <form>
+      <fieldset>
+      <legend>Personal Info</legend>
+      <label for="name">Please enter your name</label>
+      <br>
+      <!-- id connects the label to the input --> 
+      <input id="name" type="text" required placeholder="john doe">
+      <br>
+      <label for="email">Please enter your email</label>
+      <br>
+      <!-- id connects the label to the input --> 
+      <input placeholder="jdoe@gmail.org" id="email" required type="email">
+      <br>
+      <label for="number">Please enter your favorite number</label>
+      <br>
+      <!-- id connects the label to the input --> 
+      <input placeholder=9 min=5 max=20 id="number" type="number">
+      <br>
+      </fieldset>
+
+
+      <fieldset>
+      <legend>Power information</legend>
+      <label for="power">Which superpower would you prefer</label>
+      <select id="power">
+        <option>super strength</option>
+        <option>super hearing</option>
+      </select>
+      <br>
+      <p>Would you want to fly<p>
+      <!-- id connects the label to the input --> 
+      <label for="yesfly">Yes</label>
+      <input id="yesfly" name="yesfly" value="nothing1" type="radio">
+      <br>
+      <label for="nofly">No</label>
+      <input id="nofly" name="yesfly" value="nothing1" type="radio">
+
+      <br>
+      <p>Would you want to have lazer eyes<p>
+      <label for="q2">Yes</label>
+      <!-- id connects the label to the input --> 
+      <input id="q2" name="lazer" value="nothing" type="radio">
+      <label for="q21">No</label>
+      <!-- id connects the label to the input --> 
+      <input id="q21" name="lazer" value="nothing" type="radio">
+      <br>
+
+      
+      <label for="q3">Would you want to have hulk powers</label>
+      <br>
+      <!-- id connects the label to the input --> 
+      <input id="q3" name="lazer" value="nothing" type="checkbox">
+      <br>
+      <label for="q4">Would you want to have wonder woman's lasso power</label>
+      <br>
+      <!-- id connects the label to the input --> 
+      <input id="q4" name="lazer" value="nothing" type="checkbox">
+
+      <br>
+      </fieldset>
+
+      <fieldset>
+      <legend>Wrapping up!</legend>
+      <textarea name="textarea" placeholder="enter extra comments here"></textarea>
+      <br>
+      <button>Submit</button>
+      </fieldset>
+
+    </form>    </main>
       <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
 </body>

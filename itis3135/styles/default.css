@@ -44,9 +44,9 @@ header{
 }
 #headerimg {
     box-sizing: border-box;
-    width: 150px;
+    width: 250px;
     /* display: inline-flex; */
-    height: 150px;
+    height: 250px;
     float: left;
     padding: 30px 15px 10px 5px;
 }
@@ -110,3 +110,14 @@ h6 {
     text-align: center;
 }
 
+fieldset{
+    border: 5px solid #b990f4;
+}
+
+fieldset p, label{
+    color: #bac2de;
+}
+
+legend{
+    color: #f2f2ec;
+}

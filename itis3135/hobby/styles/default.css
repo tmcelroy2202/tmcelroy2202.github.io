@@ -1,0 +1,105 @@
+html{
+  height: 100%;
+
+}
+
+
+body{
+  background-color: #0a0a0a;
+  color: #eeeeee;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  margin: auto;
+  max-width: auto;
+  min-height: 100vh;
+  font-family: Noto Sans Mono;
+  
+}
+
+@media screen and (max-width: 600px){
+  div img {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px){
+  div img{
+    display: block;
+  }
+}
+
+main{
+  background-color: #0a0a0a;
+  margin-top: 5px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+
+section{
+  background-color: #141414;
+  border: 2px solid #7fd88f;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+header {
+  text-align: center;
+  background-color: #1e1e1e;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+header > div{
+  display: inline-grid;
+  grid-template-columns: auto 3fr auto;
+  align-items: center;
+  gap: 1rem;
+
+}
+div img{
+  height: 100px;
+}
+
+img {
+  max-width: 100%;
+}
+  
+
+a:visited {
+  color: #7fd88f;
+}
+
+a:hover{
+  color: #7fd88f;
+}
+
+a {
+  color: #7fd88f;
+  text-decoration: none;
+}
+
+img figcaption{
+  text-align: center;
+}
+
+pre {
+  background-color: #282a36;
+  padding: 5px;
+  border: 1px solid orange;
+}
+
+h1 {
+  font-family: "Oswald";
+}
+
+
+footer {
+  text-align: center;
+  background-color: #1e1e1e;
+  border: 15px solid #0a0a0a;
+  border-radius: 80px;
+  margin-left: 10vw; 
+  margin-right: 10vw; 
+}
