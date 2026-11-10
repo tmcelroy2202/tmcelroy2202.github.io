@@ -60,7 +60,7 @@
                 <input id="${id}-title" name="courseTitle" type="text" value="${escapeHTML(course.courseTitle || "")}" placeholder="Course title" required>
             </label>
             <label for="${id}-reason">Reason for taking it
-                <textarea id="${id}-reason" name="reasonfortaking" rows="3" placeholder="Why you're taking this course" required>${escapeHTML(course.reasonfortaking || "")}</textarea>
+            <textarea id="${id}-reason" name="reasonForTaking" rows="3" placeholder="Why you're taking this course" required>${escapeHTML(course.reasonForTaking || "")}</textarea>
             </label>
             <button type="button" data-remove-course>Delete Course</button>
         `;
@@ -73,7 +73,7 @@
             department: row.querySelector('[name="department"]').value.trim(),
             courseNumber: row.querySelector('[name="courseNumber"]').value.trim(),
             courseTitle: row.querySelector('[name="courseTitle"]').value.trim(),
-            reasonfortaking: row.querySelector('[name="reasonfortaking"]').value.trim()
+            reasonForTaking: row.querySelector('[name="reasonForTaking"]').value.trim()
         }));
     }
 
@@ -90,14 +90,16 @@
             lastName: getValue("lastName"),
             acknowledgment: getValue("acknowledgment"),
             acknowledgmentDate: getValue("acknowledgmentDate"),
-            divider: getValue("divider"),
+            prettyNameDivider: getValue("prettyNameDivider"),
             adjectives: getValue("adjectives"),
             animal: getValue("animal"),
             img: uploadedImageData || getValue("img"),
             pictureAlt: getValue("pictureAlt"),
             caption: getValue("caption"),
-            personalStatement: getValue("personalStatement"),
-            ...Object.fromEntries(BULLET_FIELDS.map(([, name]) => [name, getValue(name)])),
+            personalInfo: {
+                statement: getValue("personalStatement"),
+                ...Object.fromEntries(BULLET_FIELDS.map(([, name]) => [name, getValue(name)]))
+            },
             courses: readCourses(),
             quote: getValue("quote"),
             quoteAuthor: getValue("quoteAuthor"),
@@ -118,7 +120,7 @@
         if (data.lastName) {
             parts.push(data.lastName);
         }
-        const divider = data.divider ? ` ${data.divider} ` : " ";
+        const divider = data.prettyNameDivider ? ` ${data.prettyNameDivider} ` : " ";
         return `${parts.filter(Boolean).join(" ")}${divider}${[data.adjectives, data.animal].filter(Boolean).join(" ")}`;
     }
 
@@ -140,11 +142,8 @@
     function renderIntroduction(data) {
         const acknowledgment = `${data.acknowledgment} - TM ${formatDate(data.acknowledgmentDate)}`
             .replaceAll("--", "—");
-        const standardBullets = BULLET_FIELDS.map(([label, name]) => (
-            `<li><strong>${escapeHTML(label)}${label.endsWith(":)") ? "" : ":"}</strong> ${escapeHTML(data[name])}</li>`
-        )).join("\n          ");
         const courses = data.courses.map((course) => (
-            `<li><strong>${escapeHTML(course.department)}${escapeHTML(course.courseNumber)} - ${escapeHTML(course.courseTitle)}:</strong> ${escapeHTML(course.reasonfortaking)}</li>`
+            `<li><strong>${escapeHTML(course.department)}${escapeHTML(course.courseNumber)} - ${escapeHTML(course.courseTitle)}:</strong> ${escapeHTML(course.reasonForTaking)}</li>`
         )).join("\n            ");
         const optionalBullets = [
             data.funnyItem ? `<li><strong>Funny / Interesting Item to Remember Me by:</strong> ${escapeHTML(data.funnyItem)}</li>` : "",
@@ -157,9 +156,9 @@
   <img src="${escapeHTML(data.img)}" alt="${escapeHTML(data.pictureAlt)}">
   <figcaption class="centered">${escapeHTML(data.caption)}</figcaption>
 </figure>
-<p>${escapeHTML(data.personalStatement)}</p>
+<p>${escapeHTML(data.personalInfo.statement)}</p>
 <ul>
-  ${standardBullets}
+  ${BULLET_FIELDS.map(([label, name]) => `<li><strong>${escapeHTML(label)}:</strong> ${escapeHTML(data.personalInfo[name])}</li>`).join("\n  ")}
   <li><strong>Courses I'm Taking, &amp; Why:</strong>
     <ol>
       ${courses}
@@ -190,7 +189,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas McElroy's Terrific Muskrat | ITIS3135 | Introduction</title>
+    <title>Thomas McElroy's Terrific Muskrat | ITIS3135 | Introduction Form</title>
     <link rel="stylesheet" href="styles/default.css">
     <link rel="icon" href="images/tommyfavicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -203,7 +202,7 @@
     <!-- This div inserts the shared header; classes and ids in the generated introduction apply the site's styles and identify its display name. -->
     <div data-include="components/header.html"></div>
     <main>
-        <h2>Introduction</h2>
+        <h2>Introduction Form</h2>
 ${renderIntroduction(data)}
 ${renderFooter(data)}
     </main>
@@ -220,12 +219,12 @@ ${renderFooter(data)}
             .replaceAll('"', "&quot;")
             .replaceAll("'", "&apos;");
         const tag = (name, value) => `    <${name}>${xmlEscape(value)}</${name}>`;
-        const bulletXML = BULLET_FIELDS.map(([, name]) => tag(name, data[name])).join("\n");
+        const bulletXML = BULLET_FIELDS.map(([, name]) => tag(name, data.personalInfo[name])).join("\n");
         const courseXML = data.courses.map((course) => `      <course>
 ${tag("department", course.department).replace(/^    /gm, "        ")}
 ${tag("courseNumber", course.courseNumber).replace(/^    /gm, "        ")}
 ${tag("courseTitle", course.courseTitle).replace(/^    /gm, "        ")}
-${tag("reasonfortaking", course.reasonfortaking).replace(/^    /gm, "        ")}
+${tag("reasonForTaking", course.reasonForTaking).replace(/^    /gm, "        ")}
       </course>`).join("\n");
         const footerXML = data.footerLinks.map((link) => `      <link>
         <label>${xmlEscape(link.label)}</label>
@@ -239,7 +238,7 @@ ${tag("firstName", data.firstName).replace(/^    /gm, "    ")}
 ${tag("middleName", data.middleName).replace(/^    /gm, "    ")}
 ${tag("nickname", data.nickname).replace(/^    /gm, "    ")}
 ${tag("lastName", data.lastName).replace(/^    /gm, "    ")}
-${tag("divider", data.divider).replace(/^    /gm, "    ")}
+${tag("prettyNameDivider", data.prettyNameDivider).replace(/^    /gm, "    ")}
 ${tag("displayName", displayName(data)).replace(/^    /gm, "    ")}
   </identity>
   <acknowledgment>
@@ -255,10 +254,10 @@ ${tag("img", data.img).replace(/^    /gm, "    ")}
 ${tag("alt", data.pictureAlt).replace(/^    /gm, "    ")}
 ${tag("caption", data.caption).replace(/^    /gm, "    ")}
   </picture>
-${tag("personalStatement", data.personalStatement).replace(/^    /gm, "  ")}
-  <background>
+  <personalInfo>
+${tag("statement", data.personalInfo.statement).replace(/^    /gm, "    ")}
 ${bulletXML}
-  </background>
+  </personalInfo>
   <courses>
 ${courseXML}
   </courses>
